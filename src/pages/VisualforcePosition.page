@@ -1,0 +1,10 @@
+<apex:page standardController="Position__c" id="thePage">
+<apex:form >
+    <apex:pageBlock title="PageBlock Title">
+        <apex:pageBlockSection columns="1" collapsible="true" title="PageBlockSection Title" >
+            <apex:inputField value="{!Position__c.Department__c}" />
+            <apex:inputField value="{!Position__c.Job_Description__c}" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

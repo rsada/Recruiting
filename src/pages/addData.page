@@ -1,0 +1,17 @@
+<apex:page controller="dataLoadController">
+    <apex:form >
+        <apex:sectionHeader title="Adding data for Chapter 9"></apex:sectionHeader>
+        <apex:pageBlock mode="edit">
+        <apex:pageblockSection columns="1">
+        There is no data to add during Chapter 9 of the <i>Developer's Guide</i>.<p/>
+        All of the data required for the exercises in this chapter was added from the Initialize Data page. <p/>
+            <p/>
+        </apex:pageblockSection>
+        <apex:pageBlockSection columns="1">
+            <p/>
+            <apex:outputLabel value="{!loadStatus}"/>
+            <apex:Messages />
+        </apex:pageblockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

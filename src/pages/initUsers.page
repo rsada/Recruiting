@@ -1,0 +1,33 @@
+<apex:page controller="initUser">
+    <apex:form >
+        <apex:sectionHeader title="Initialize additional users for Developer's Guide"></apex:sectionHeader>
+        <apex:pageBlock mode="edit">
+        <apex:pageblockSection columns="1">
+        Enter the common information you would like to use for all four additional users required for the <i>Developer's Guide</i> 
+            exercises:<p/>
+            <apex:inputField value="{!newUsers.Street}"/>
+            <apex:inputField value="{!newUsers.CompanyName}"/>
+            <apex:inputField value="{!newUsers.city}"/>
+            <apex:inputField value="{!newUsers.state}"/>
+            <apex:inputField value="{!newUsers.email}"/>
+            <p/>
+        </apex:pageblockSection>
+        <apex:pageBlockSection >
+                The domain name you enter will be added to the user names to create a unique identification.  The name should have the format of a standard domain, such as 'salesforce.com'. This domain will not be used for email.
+            <apex:pageblockSectionItem >
+                <apex:inputText value="{!domainID}" id="domainID"></apex:inputText>
+                <apex:actionSupport event="onchange" rerender="buttons"></apex:actionSupport>
+            </apex:pageblockSectionItem>
+            <p/>
+        </apex:pageBlockSection>
+        <apex:pageblockSection columns="1" id="buttons">
+            <apex:commandButton value="Initialize Users" action="{!initializeUsers}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <p/>
+            <apex:outputLabel value="{!resultStatus}"/>
+            <apex:Messages />
+        </apex:pageblockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
